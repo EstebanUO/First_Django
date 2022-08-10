@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %}
+Pagina de Noticias
+{% endblock %}
+
+{% block content %}
+    <div>
+        <h2 class="subtitulo">Mas noticias</h2>
+    </div><br>
+    <div class="allNotice">
+        <div class="moreNotice">
+            <a href="https://www.enter.co/especiales/dev/herramientas-dev/este-es-pyscript-el-minecraft-de-los-desarrolladores-de-software/" target="_blank" class="ref2"><br>
+                <h3>Este es PyScript: el ‘Minecraft’ de los desarrolladores de Software</h3>
+                <img src="{% static 'images/mine.png' %}" alt="a" srcset="">
+            </a>
+        </div>
+        <br>
+        <div class="moreNotice">
+            <a href="https://www.enter.co/especiales/dev/empleos-dev/python-es-nombrado-como-el-lenguaje-de-programacion-con-mayor-demanda-en-2022/" target="_blank" class="ref2"><br>
+                <h3>Python será el lenguaje de programación con mayor demanda</h3>
+                <img src="{% static 'images/python.png' %}" alt="b" srcset="">
+            </a>
+        </div>
+    </div>
+{% endblock %}

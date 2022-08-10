@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Pagina de contacto
+{% endblock %}
+
+{% block content %}
+    <h2 class="subtitulo">Contactenos</h2>
+    <br>
+    <div class="form">
+        <form class="contacto">
+            <p class="nombre">
+                <label for="nombre" class="colocar_nombre">Nombre
+                <span class="obligatorio">*</span>
+                </label>
+                <input type="text" name="introducir_nombre" id="nombre" required="obligatorio" placeholder="Escribe tu nombre">
+            </p><br>
+            <p class="email">
+                <label for="email" class="colocar_nombre">Email
+                <span class="obligatorio">*</span>
+                </label>
+                <input type="email" name="introducir_email" id="email" required="obligatorio" placeholder="Escribe tu Email">
+            </p><br>
+            <p class="telefono">
+                <label for="telefone" class="colocar_nombre">Teléfono
+                </label>
+                <input type="tel" name="introducir_telefono" id="telefono" placeholder="Escribe tu teléfono">
+            </p><br>
+            <p class="asunto">
+                <label for="asunto" class="colocar_nombre">Asunto
+                <span class="obligatorio">*</span>
+                </label>
+                <input type="text" name="introducir_asunto" id="assunto" required="obligatorio" placeholder="Escribe un asunto">
+            </p><br>   
+            <p class="mensaje">
+                <label for="mensaje" class="colocar_nombre">Mensaje
+                <span class="obligatorio">*</span>
+                </label>                     
+                <textarea name="introducir_mensaje" class="texto_mensaje" id="mensaje" required="obligatorio" placeholder="Deja aquí tu comentario..."></textarea> 
+            </p>
+            <br>               
+            <button type="submit" name="enviar_formulario" id="enviar" class="enviar">Enviar</button>
+            <br>
+            <p class="aviso">
+                <span class="obligatorio"> * </span>los campos son obligatorios.
+            </p>          
+        </form>
+    </div>
+
+{% endblock %}

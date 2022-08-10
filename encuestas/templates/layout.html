@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+    <link rel="shortcut icon" href="{% static 'images/icono.png' %}" type="image/x-icon">
+    <title>{% block title %} ADSI NOTICIAS {% endblock %}</title>
+</head>
+<body>
+    <div class="banner" id="banner">
+        <h1 class="titulo">NOTIADSI</h1>
+    </div>
+    <hr>
+    <div class="bannerRutas">
+        <ul class="rutas">
+            <li> <a href="/" class="ref1">| Inicio |</a> </li>
+            <li> <a href="/encuesta" class="ref1">| Mas Noticias |</a> </li>
+            <li> <a href="/contacto" class="ref1">| Contactenos |</a> </li>
+        </ul>
+    </div>
+    <hr>
+    <br>
+    <div class="contenido">
+        {% block content %}
+        <div>
+            <h2 class="subtitulo">Tecnologia</h2>
+        </div>
+        <br><br>
+        <div>
+            <div class="allNotice">
+                <div class="cuadros">
+                    <a href="https://www.bbc.com/mundo/noticias-62287477" target="_blank" class="ref2"><img src="{% static 'images/noti1.jpg' %}" alt="noticia1" srcset="" >
+                        <h3>Un robot quiebra el dedo de un niño de 7 años durante una partida de ajedrez</h3>
+                    </a><br>
+                    <p>24 Julio 2022</p>
+                </div>
+                <div class="cuadros">
+                    <a href="https://www.bbc.com/mundo/noticias-62280846" target="_blank" class="ref2"><img src="{% static 'images/noti2.jpg' %}" alt="noticia2" srcset="" >
+                        <h3>Google despide al ingeniero que aseguró que un programa de inteligencia artificial cobró conciencia propia</h3>
+                    </a><br>
+                    <p>23 Julio 2022</p>
+                </div>
+                <div class="cuadros">
+                    <a href="https://www.bbc.com/mundo/noticias-62232505" target="_blank" class="ref2"><img src="{% static 'images/noti3.jpg' %}" alt="noticia2" srcset="" >
+                        <h3>Tesla: la empresa de Elon Musk vende la mayoría de sus bitcoin</h3>
+                    </a><br>
+                    <p>21 Julio 2022</p>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+    </div><br>
+    <hr class="lineFooter">
+    {% include 'footer.html' %}
+    
+</body>
+</html>
